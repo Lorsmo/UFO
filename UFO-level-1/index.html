@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 
-<body>
+<body class="bg-dark">
   <div class="wrapper">
     <nav class="navbar navbar-default">
       <div class="container-fluid">
@@ -28,37 +28,65 @@
       <h1>UFO Sightings</h1>
       <p>The Truth is Out There</p>
     </div>
-    <div class="container">
-      <div class="row">
-        <button id="filter-btn" type="submit" class="btn btn-sm btn-primary">Submit</button>
+    <div class="container bg-dark">
+      <div class="row p-2 m-2">
+        <div class="box p-2 bg-light border border-warning">
+        <button id="clear-btn" type="submit" class="btn btn-sm btn-primary">Clear</button>
+        <div class="text-warning text-justified">
+        <p>Number events:</p>
+        <p id="number-events"></p>
             </div>
+          </div>
+          </div>
         
         <div class="row">
-        <div class="col-md-10">
-          <div id="table-area" class="">
-            <table id="ufo-table" class="table table-striped">
-              <thead>
+            <div class="col-md-12">
+                <div class="box p-2 bg-light border border-warning">
+            <div class="panel panel-primary filterable">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Users</h3>
+                    <div class="pull-right">
+                        <button class="btn btn-default btn-xs btn-filter"><span class="glyphicon glyphicon-filter"></span> Filter</button>
+                    </div>
+                </div>
+            <table id="ufo-table" class="table table-bordered w.auto table-sm table-hover table-index table-striped">
+              <thead class="thead-dark">
                 <tr>
                   <th class="table-head">Date</th>
                   <th class="table-head">City</th>
-                  <th class="table-head">State</th>
-                  <th class="table-head">Country</th>
+                  <th style="width: 7%" class="table-head">State</th>
+                  <th style="width: 10%" class="table-head">Country</th>
                   <th class="table-head">Shape</th>
-                  <th class="table-head">Duration</th>
+                  <th style="width: 10%" class="table-head">Duration</th>
                   <th class="table-head">Comments</th>
                 </tr>
                 <tr>
-                  <th> <select class="empty form-control" id="date">
+                  <th> <select class="empty form-control border border-info" id="date">
                       <option value="" disabled selected>Date</option>
                       <option value="All">All</option>
                       
                     </select></th>
-                  <th class="table-head">City</th>
-                  <th class="table-head">State</th>
-                  <th class="table-head">Country</th>
-                  <th class="table-head">Shape</th>
-                  <th class="table-head">Duration</th>
-                  <th class="table-head">Comments</th> 
+                  <th><select class="empty form-control" id="city">
+                     
+                      <option value="" disabled selected>City</option>
+                      <option value="All">All</option>
+                      
+                    </select></th>
+                  <th><select class="empty form-control" id="state">
+                      <option value="" disabled selected>State</option>
+                      <option value="All">All</option>
+                      
+                    </select></th>
+                  <th><select class="empty form-control" id="country">
+                      <option value="" disabled selected>Country</option>
+                      <option value="All">All</th>
+                  <th><select class="empty form-control" id="shape">
+                      <option value="" disabled selected>Shape</option>
+                      <option value="All">All</th>
+                  <div class="filters">
+                    <th><input id="inputSearch" class="form-control" type="text" placeholder="Search.."></input></th>
+                    <th><input id="myInput" class="form-control" type="text" placeholder="Search.."></input></th> 
+                  </div>
                 </tr>
               </thead>
               <tbody></tbody>
