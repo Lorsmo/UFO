@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body id="page-top" class="bg-dark">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-white js-scroll-trigger" href="#page-top"><i class="fas fa-eye"></i> UFO Sightings
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-white" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger text-white" href="#table-section"><i class="fas fa-table"></i> Table</a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>The Truth is Out There</p>
+    </div>
+
+<!-- About Section -->
+<section class="page-section bg-dark" id="about">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 about text-center">
+          <h2 class="text-white">WAKE UP SHEEPLE!</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4">The extra-terrestrial menace has come to Earth and we here at ALIENS-R-REAL have collected all of the eye-witness reports we could to prove it! We put this information online for the world to see and then the matter will finally be put to rest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Table Section -->
+<section class="page-section bg-dark" id="table-section">
+    <div class="container">
+      <div class="row justify-content-center m-5">
+        <div class="col-md-3 mt-5">
+        <div class="box mt-5 bg-light border border-warning">
+        <div class="text-warning table-text text-center">
+        <p>Number events:</p>
+        <p id="number-events"></p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="box p-2 bg-light border border-warning">
+            <div class="panel panel-primary filterable">
+                
+            <table id="ufo-table" class="table table-bordered table-sm table-hover table-index table-striped">
+              <thead class="thead-dark text-center">
+                <tr>
+                  <th class="table-head">Date</th>
+                  <th class="table-head">City</th>
+                  <th style="width: 7%" class="table-head">State</th>
+                  <th style="width: 10%" class="table-head">Country</th>
+                  <th class="table-head">Shape</th>
+                  <th style="width: 10%" class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+                <tr>
+                  <th> <select class="empty form-control border border-info" id="date">
+                      <option value="" disabled selected>Date</option>
+                      <option value="All">All</option>
+                      
+                    </select></th>
+                  <th><select class="empty form-control" id="city">
+                     
+                      <option value="" disabled selected>City</option>
+                      <option value="All">All</option>
+                      
+                    </select></th>
+                  <th><select class="empty form-control" id="state">
+                      <option value="" disabled selected>State</option>
+                      <option value="All">All</option>
+                      
+                    </select></th>
+                  <th><select class="empty form-control" id="country">
+                      <option value="" disabled selected>Country</option>
+                      <option value="All">All</th>
+                  <th><select class="empty form-control" id="shape">
+                      <option value="" disabled selected>Shape</option>
+                      <option value="All">All</th>
+                  <div class="filters">
+                    <th><input id="inputSearch" class="form-control" type="text" placeholder="Search.."></input></th>
+                    <th><input id="myInput" class="form-control" type="text" placeholder="Search.."></input></th> 
+                  </div>
+                </tr>
+              </thead>
+              <tbody class="my-tbody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  </div>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+  
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
